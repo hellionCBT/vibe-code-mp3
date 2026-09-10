@@ -1,0 +1,29 @@
+{
+  "name": "vibemp3s",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev-win": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.vibemp3s.app",
+    "productName": "VibeMP3s",
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "ffbinaries": "^1.1.6",
+    "yt-dlp-exec": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^29.4.6",
+    "electron-builder": "^24.13.3"
+  }
+}
