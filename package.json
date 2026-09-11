@@ -1,6 +1,8 @@
 {
   "name": "vibemp3s",
   "version": "1.0.0",
+  "description": "Vibecode MP3 Downloader",
+  "author": "glasg",
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
@@ -11,14 +13,26 @@
   "build": {
     "appId": "com.vibemp3s.app",
     "productName": "VibeMP3s",
-    "win": {
-      "target": "nsis"
-    },
     "directories": {
       "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "glasg",
+      "repo": "vibecode-mp3-downloader"
     }
   },
   "dependencies": {
+    "electron-log": "^5.1.0",
+    "electron-updater": "^6.1.7",
     "ffbinaries": "^1.1.6",
     "yt-dlp-exec": "^1.0.2"
   },
